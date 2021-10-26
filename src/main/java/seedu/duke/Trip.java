@@ -143,6 +143,17 @@ public class Trip {
         }
     }
 
+    private boolean isDateValid(String inputDate) {
+        try {
+            LocalDate.parse(inputDate, inputPattern);
+            return true;
+        } catch (DateTimeParseException e) {
+            Storage.getLogger().log(Level.INFO, "Invalid date format entered");
+            Ui.viewFilterDateInvalid();
+            return false;
+        }
+    }
+
     //@@author itsleeqian
     public void getIndividualExpenseSummary(Person person) {
         double currentAmount; //amount paid for current expense
@@ -192,6 +203,7 @@ public class Trip {
         return false;
     }
     //@@author
+
 
     public LocalDate getDateOfTrip() {
         return dateOfTrip;
