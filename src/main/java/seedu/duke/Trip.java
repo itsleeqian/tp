@@ -154,8 +154,7 @@ public class Trip {
         }
     }
     //@@author
-
-    //@@author itsleeqian
+    
     public void getIndividualExpenseSummary(Person person) {
         double currentAmount; //amount paid for current expense
         double totalAmountSpent = 0;
