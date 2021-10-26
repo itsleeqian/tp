@@ -184,6 +184,11 @@ public class Trip {
     //@@author
 
     //@@author itsleeqian
+
+    /**
+     * Prints out an individual's expenditure summary (for a trip).
+     * @param person person to check
+     */
     public void getIndividualExpenseSummary(Person person) {
         double currentAmount; //amount paid for current expense
         double totalAmountSpent = 0;
